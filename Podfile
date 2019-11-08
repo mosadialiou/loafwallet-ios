@@ -7,8 +7,9 @@ use_frameworks!
 
 #Shared Cocopods
 def shared_pods
-  pod 'Alamofire', '~> 4.7'
-  pod 'Mixpanel-swift' 
+    pod 'Alamofire', '~> 4.7'
+    pod 'Mixpanel-swift'
+    pod 'NewRelicAgent', '~> 6.9'
 end
 
 def shared_watchOS_pods

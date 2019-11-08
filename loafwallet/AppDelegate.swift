@@ -26,8 +26,7 @@
 import UIKit
 import LocalAuthentication
 import Mixpanel
-
-
+ 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private var window: UIWindow? {
@@ -36,15 +35,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let applicationController = ApplicationController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+
         var mixpanelToken = ""
+        var newRelicToken = ""
+        
         #if Debug || Testflight
              mixpanelToken = K.mixpanelTokenDevelopment
+             newRelicToken = K.newRelicTokenDevelopment
         #else
              mixpanelToken = K.mixpanelTokenProduction
+             newRelicToken = K.newRelicTokenProduction
         #endif
+        
+        NewRelicAgent.start(withApplicationToken: newRelicToken)
         Mixpanel.initialize(token: mixpanelToken)
-        Mixpanel.mainInstance().track(event: K.MixpanelEvents._20191105_AL.rawValue, properties: ["app details":["VERSION": AppVersion.string]])
+        Mixpanel.mainInstance().track(event: K.MixpanelEvents._20191105_AL.rawValue, properties: ["app details":
+                        ["VERSION": AppVersion.string,
+                         "CURRENT_LANGUAGE": Bundle.main.preferredLocalizations.first ?? "--"]])
         
         UIView.swizzleSetFrame()
         applicationController.launch(application: application, options: launchOptions)
@@ -89,6 +96,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         return applicationController.open(url: url)
+    }
+    
+    func application(_ application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
+        //For Laungauge Changing
+        return true
+    }
+    
+    func application(_ application: UIApplication, shouldRestoreApplicationState coder: NSCoder) -> Bool {
+                //For Laungauge Changing
+        return true
     }
 
 }

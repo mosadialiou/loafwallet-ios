@@ -471,6 +471,12 @@ class WalletManager : BRWalletListener, BRPeerManagerListener {
     }
     
     func savePeers(_ replace: Bool, _ peers: [BRPeer]) {
+        
+        
+        peers.forEach { (peer) in
+            print("XXXX PEER\(peer.address) \(peer.timestamp)")
+        }
+        
         DispatchQueue.walletQueue.async {
             var pk: Int32 = 0
             sqlite3_exec(self.db, "begin exclusive", nil, nil, nil)

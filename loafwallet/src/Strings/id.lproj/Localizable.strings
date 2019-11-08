@@ -33,7 +33,7 @@
 "AccountHeader.defaultWalletName" = "";
 
 /* Equals symbol */
-"AccountHeader.equals" = " = "";
+"AccountHeader.equals" = "=";
 
 /* Error alert title */
 "Alert.error" = "";
