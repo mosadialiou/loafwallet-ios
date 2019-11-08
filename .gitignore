@@ -66,4 +66,4 @@ fastlane/test_output
 Screenshots/shots
 .DS_Store
 /loafwallet/Keys.swift
-/loafwallet/NRKEYS.txt
+/NRKEYS.txt
