@@ -4627,7 +4627,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SCRIPT=`/usr/bin/find \"${SRCROOT}\" -name newrelic_postbuild.sh | head -n 1`\nKEY=SCRIPT_INPUT_F\n/bin/sh \"${SCRIPT}\" \"AA46f9f66d26bd42a219341fae281db7a5d9103743-NRMA\"\n";
+			shellScript = "SCRIPT=`/usr/bin/find \"${SRCROOT}\" -name newrelic_postbuild.sh | head -n 1`\nNR=${SCRIPT_INPUT_FILE_0} \nsource $NR \n/bin/sh \"${SCRIPT}\" \"${NRAPIKEY_DEV}\"\n";
 		};
 		247556CE2374DF65000A9E78 /* NR dSYM Post Build Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -4637,6 +4637,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/NRKEYS.txt",
 			);
 			name = "NR dSYM Post Build Script";
 			outputFileListPaths = (
@@ -4645,7 +4646,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SCRIPT=`/usr/bin/find \"${SRCROOT}\" -name newrelic_postbuild.sh | head -n 1`\n\n/bin/sh \"${SCRIPT}\" \"AAfec94ac47b94d852398b70551321ab23007c74e6\"\n";
+			shellScript = "SCRIPT=`/usr/bin/find \"${SRCROOT}\" -name newrelic_postbuild.sh | head -n 1`\nNR=${SCRIPT_INPUT_FILE_0} \nsource $NR \n/bin/sh \"${SCRIPT}\" \"${NRAPIKEY_PROD}\"\n";
 		};
 		276D575DEEF688F51822CA16 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
