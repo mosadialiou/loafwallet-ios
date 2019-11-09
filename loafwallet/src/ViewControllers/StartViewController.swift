@@ -19,7 +19,7 @@ class StartViewController : UIViewController {
     }
 
     //MARK: - Private
-    private let message = UILabel(font: .customMedium(size: 20.0), color: .whiteTint)
+    private let message = UILabel(font: .barloweMedium(size: 20.0), color: .whiteTint)
     private let create = ShadowButton(title: S.StartViewController.createButton, type: .flatWhite)
     private let recover = ShadowButton(title: S.StartViewController.recoverButton, type: .flatLitecoinBlue)
     private let store: Store
@@ -31,7 +31,7 @@ class StartViewController : UIViewController {
         image.contentMode = .scaleAspectFit
         return image
     }()
-    private let versionLabel = UILabel(font: .barloweMedium(size: 14), color: .transparentWhite)
+    private var versionLabel = UILabel(font: .barloweLight(size: 10), color: .transparentWhite)
 
     override func viewDidLoad() {
         view.backgroundColor = .white
@@ -46,10 +46,11 @@ class StartViewController : UIViewController {
         message.lineBreakMode = .byWordWrapping
         message.numberOfLines = 0
         message.textAlignment = .center
+        message.textColor = .white
+        
         versionLabel.text = AppVersion.string
         versionLabel.textAlignment = .right
-        message.textColor = .white
-        versionLabel.textColor = .white
+        versionLabel.textColor = .whiteTint
 
         if #available(iOS 11.0, *) {
             guard let mainColor = UIColor(named: "mainColor") else {

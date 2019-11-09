@@ -121,7 +121,7 @@ class LoginViewController : UIViewController, Subscriber, Trackable {
     private var hasAttemptedToShowBiometrics = false
     private let lockedOverlay = UIVisualEffectView()
     private var isResetting = false
-    private let version = UILabel(font: .customMedium(size: 12), color: .whiteTint)
+    private let version = UILabel(font: .barloweMedium(size: 12), color: .whiteTint)
     private var isWalletEmpty = false
   
     override func viewDidLoad() {
