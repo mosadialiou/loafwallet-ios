@@ -308,10 +308,6 @@
 		240A89B6235F7280005E2A2F /* DonationSetupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240A89B4235F7280005E2A2F /* DonationSetupCell.swift */; };
 		24670EAD2368EDE7006093E0 /* LFColorPalette.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24670EAC2368EDE7006093E0 /* LFColorPalette.xcassets */; };
 		24670EAE2368EDE7006093E0 /* LFColorPalette.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24670EAC2368EDE7006093E0 /* LFColorPalette.xcassets */; };
-		247556D12375D93E000A9E78 /* Placement.m in Sources */ = {isa = PBXBuildFile; fileRef = 247556D02375D93E000A9E78 /* Placement.m */; };
-		247556D22375D93E000A9E78 /* Placement.m in Sources */ = {isa = PBXBuildFile; fileRef = 247556D02375D93E000A9E78 /* Placement.m */; };
-		247556D42375D9A2000A9E78 /* PlacementTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 247556D32375D9A2000A9E78 /* PlacementTwo.m */; };
-		247556D52375D9A2000A9E78 /* PlacementTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 247556D32375D9A2000A9E78 /* PlacementTwo.m */; };
 		2485F7CF23728C19005962F1 /* RELEASE_NOTES.md in Resources */ = {isa = PBXBuildFile; fileRef = 2485F7CE23728C19005962F1 /* RELEASE_NOTES.md */; };
 		2485F7D023728C19005962F1 /* RELEASE_NOTES.md in Resources */ = {isa = PBXBuildFile; fileRef = 2485F7CE23728C19005962F1 /* RELEASE_NOTES.md */; };
 		2485F7D223735858005962F1 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485F7D123735858005962F1 /* Keys.swift */; };
@@ -1145,8 +1141,6 @@
 		240A89B4235F7280005E2A2F /* DonationSetupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationSetupCell.swift; sourceTree = "<group>"; };
 		24670EAC2368EDE7006093E0 /* LFColorPalette.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LFColorPalette.xcassets; sourceTree = "<group>"; };
 		247556CF23753A95000A9E78 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
-		247556D02375D93E000A9E78 /* Placement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Placement.m; sourceTree = "<group>"; };
-		247556D32375D9A2000A9E78 /* PlacementTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlacementTwo.m; sourceTree = "<group>"; };
 		247556D62375DC8E000A9E78 /* loafwallet:loafwallet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "loafwallet:loafwallet-Bridging-Header.h"; sourceTree = "<group>"; };
 		247729612375DDD800B10C01 /* loafwallet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "loafwallet-Bridging-Header.h"; sourceTree = "<group>"; };
 		2485F7CE23728C19005962F1 /* RELEASE_NOTES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RELEASE_NOTES.md; sourceTree = "<group>"; };
@@ -3271,8 +3265,6 @@
 			children = (
 				247556D62375DC8E000A9E78 /* loafwallet:loafwallet-Bridging-Header.h */,
 				247729612375DDD800B10C01 /* loafwallet-Bridging-Header.h */,
-				247556D32375D9A2000A9E78 /* PlacementTwo.m */,
-				247556D02375D93E000A9E78 /* Placement.m */,
 				75A2A7921DA5934300A983D8 /* loafwallet */,
 				75A2A7A71DA5934300A983D8 /* loafwalletTests */,
 				75A2A7B21DA5934300A983D8 /* loafwalletUITests */,
@@ -4780,7 +4772,6 @@
 				24A6DCFB2230BD9000505F44 /* WipeEmptyWalletViewController.swift in Sources */,
 				1B86CDCF2091528B00BCE82E /* BRCore.swift in Sources */,
 				1B86CDD02091528B00BCE82E /* BRCameraPlugin.swift in Sources */,
-				247556D12375D93E000A9E78 /* Placement.m in Sources */,
 				1B86CDD12091528B00BCE82E /* CGRect+Additions.swift in Sources */,
 				1B86CDD22091528B00BCE82E /* WalletInfo.swift in Sources */,
 				1B86CDD32091528B00BCE82E /* TransactionDetailCollectionViewCell.swift in Sources */,
@@ -4789,7 +4780,6 @@
 				1B86CDD62091528B00BCE82E /* UIViewController+BRWAdditions.swift in Sources */,
 				1B86CDD72091528B00BCE82E /* BRBrowserViewController.swift in Sources */,
 				1B86CDD82091528B00BCE82E /* ExchangeUpdater.swift in Sources */,
-				247556D42375D9A2000A9E78 /* PlacementTwo.m in Sources */,
 				1B86CDD92091528B00BCE82E /* UIControl+Callback.swift in Sources */,
 				1B86CDDA2091528B00BCE82E /* BRSocketHelpers.c in Sources */,
 				1B86CDDB2091528B00BCE82E /* AlertView.swift in Sources */,
@@ -5221,7 +5211,6 @@
 				CE45C1F91E74B400002C3847 /* ManageWalletViewController.swift in Sources */,
 				CE03EC721EF193810038E3A8 /* String+Keys.swift in Sources */,
 				CE92F9F01DED0C790046B516 /* PresentModalAnimator.swift in Sources */,
-				247556D22375D93E000A9E78 /* Placement.m in Sources */,
 				CEAA9E951DC1659F0066731D /* UILabel+BRWAdditions.swift in Sources */,
 				CEBF292E1EF99E55005C330A /* LightWeightAlert.swift in Sources */,
 				CEBF32EE1DDBC30000348FC6 /* ShadowButton.swift in Sources */,
@@ -5234,7 +5223,6 @@
 				22A9A9521DF61945000F0016 /* BRKVStorePlugin.swift in Sources */,
 				CEAFC8611E5D5B0500E4FD06 /* SegmentedButton.swift in Sources */,
 				CE30F0E61EB27844004B8EE5 /* PhoneWCSessionManager.swift in Sources */,
-				247556D52375D9A2000A9E78 /* PlacementTwo.m in Sources */,
 				7503773D1DF57428005EB8AE /* WalletManager+Auth.swift in Sources */,
 				22A9A9581DF61945000F0016 /* BRWebViewController.swift in Sources */,
 				CEC4CF091F0C84AB00E5C82E /* UIViewController+Alerts.swift in Sources */,
